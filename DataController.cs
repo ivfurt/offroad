@@ -73,17 +73,7 @@ public class DataController : MonoBehaviour
         DontDestroyOnLoad(this);
         DontDestroyOnLoad(gameObject);
     }
-
-    /*public BuildData GetBuildData(string id)
-    {
-        for (int i = 0; i < builds.Length; i++)
-        {
-            if (builds[i].id == id)
-                return builds[i];
-        }
-        return null;
-    }*/
-
+    
     public bool ContainsTag(string tag)
     {
         for (int i = 0; i < tagsDeform.Length; i++)
@@ -213,52 +203,7 @@ public class DataController : MonoBehaviour
         }
         return antenns_return[Random.Range(0, antenns_return.Count - 1)];
     }
-    /* СЕЙЧАС ЭТО НАХОДИТСЯ ОТНОСИТЕЛЬНО CARDATA
-        public CarVisualData[] GetCarVisualDataCategory(CarVisualDataType category)
-        {
-            switch (category)
-            {
-                case CarVisualDataType.Color:
-                    return colors;
-                case CarVisualDataType.Disc:
-                    return discs;
-                case CarVisualDataType.Tire:
-                    return tires;
-                case CarVisualDataType.Armor:
-                    return armors;
-                case CarVisualDataType.Light:
-                    return lights;
-            }
-            return null;
-        }
-
-        public CarVisualData GetCarVisualData(CarVisualDataType category, string id)
-        {
-            CarVisualData[] list = GetCarVisualDataCategory(category);
-
-            if(list != null)
-                for (int i = 0; i < list.Length; i++)
-                {
-                    if (list[i].category == category && list[i].id == id)
-                        return list[i];
-                }
-
-            return null;
-        }
-        public CarVisualData GetCarVisualDataRandom(CarVisualDataType category)
-        {
-            CarVisualData[] list = GetCarVisualDataCategory(category);
-
-            if (list != null)
-                for (int i = 0; i < list.Length; i++)
-                {
-                    if (list[i].category == category)
-                        return list[Random.Range(0, list.Length)];
-                }
-
-            return null;
-        }*/
-
+   
     public ModeData GetModeData(string id)
     {
         for(int i = 0; i < modes.Length; i++)
@@ -351,19 +296,7 @@ public class DataController : MonoBehaviour
     }
 
     public LocationPresetData GetRandomLocationPreset()
-    {
-        //if (InventoryController.instance != null && (InventoryController.instance.locationCurr.locationData.id_ == "Location_Trial_1"
-        //    || InventoryController.instance.locationCurr.locationData.id_ == "Location_Trial_2"
-        //    || InventoryController.instance.locationCurr.locationData.id_ == "Location_Trial_3"))
-        //{
-        //    return locationPresets[0];
-        //}
-        //else
-        //{ 
-        //    return locationPresets[Random.Range(0, locationPresets.Length)];
-
-        //}
-
+    {     
         return locationPresets[Random.Range(0, locationPresets.Length)];
     }
 
